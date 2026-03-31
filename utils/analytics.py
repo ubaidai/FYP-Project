@@ -1,5 +1,5 @@
-from transformers import pipeline
 import streamlit as st
+from transformers import pipeline
 from typing import List, Dict
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
@@ -8,8 +8,8 @@ from sklearn.cluster import KMeans
 @st.cache_resource
 def load_sentiment_model():
     return pipeline(
-        "sentiment-analysis",
-        model="distilbert-base-uncased-finetuned-sst-2-english",
+        "text-classification",
+        model="cardiffnlp/twitter-roberta-base-sentiment-latest",
         truncation=True,
         max_length=512
     )
@@ -18,11 +18,11 @@ def load_sentiment_model():
 def analyze_sentiment(text: str, model) -> Dict:
     try:
         result = model(text[:512])[0]
-        label = result['label']
+        label = result['label'].lower()
         score = result['score']
-        if label == "POSITIVE" and score > 0.7:
+        if "positive" in label:
             return {"sentiment": "Satisfied", "emoji": "😊", "color": "#00C853", "score": round(score, 2)}
-        elif label == "NEGATIVE" and score > 0.7:
+        elif "negative" in label:
             return {"sentiment": "Frustrated", "emoji": "😞", "color": "#FF3D00", "score": round(score, 2)}
         else:
             return {"sentiment": "Neutral", "emoji": "😐", "color": "#FFB300", "score": round(score, 2)}
