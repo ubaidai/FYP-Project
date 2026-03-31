@@ -37,7 +37,7 @@ RULES:
     messages.append({"role": "user", "content": user_message})
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.3-70b-versatile",
         messages=messages,
         max_tokens=512,
         temperature=0.3
