@@ -56,7 +56,7 @@ def init_session():
         "unanswered_questions": [], "docs_loaded": False,
         "chunks_count": 0, "bot_name": "Support Agent",
         "company_name": "My Company", "total_messages": 0,
-        "groq_api_key": os.getenv("GROQ_API_KEY", ""),
+        "groq_api_key": os.getenv("GROQ_API_KEY", "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"),
         "collection_name": "support_docs_v1",
     }
     for k, v in defaults.items():
