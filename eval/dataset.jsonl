@@ -1,0 +1,55 @@
+{"id": "co-1", "topic": "company", "in_scope": true, "question": "What kind of business are you?", "answer_key": "online retail platform offering electronics"}
+{"id": "co-2", "topic": "company", "in_scope": true, "question": "What do you sell?", "answer_key": "online retail platform offering electronics"}
+{"id": "co-3", "topic": "company", "in_scope": true, "question": "Tell me about your store", "answer_key": "online retail platform offering electronics"}
+{"id": "ct-1", "topic": "contact", "in_scope": true, "question": "How do I reach a human?", "answer_key": "+92-300-1234567"}
+{"id": "ct-2", "topic": "contact", "in_scope": true, "question": "Do you have a WhatsApp number?", "answer_key": "+92-300-1234567"}
+{"id": "ct-3", "topic": "contact", "in_scope": true, "question": "I need to speak to someone about a problem", "answer_key": "+92-300-1234567"}
+{"id": "hr-1", "topic": "hours", "in_scope": true, "question": "When are you open?", "answer_key": "Monday to Saturday from 9:00 AM to 9:00 PM"}
+{"id": "hr-2", "topic": "hours", "in_scope": true, "question": "Are you available on Sunday?", "answer_key": "Monday to Saturday from 9:00 AM to 9:00 PM"}
+{"id": "hr-3", "topic": "hours", "in_scope": true, "question": "What time does your support close?", "answer_key": "Monday to Saturday from 9:00 AM to 9:00 PM"}
+{"id": "dl-1", "topic": "delivery_time", "in_scope": true, "question": "How fast will my package arrive?", "answer_key": "Standard delivery takes 3-5 business days"}
+{"id": "dl-2", "topic": "delivery_time", "in_scope": true, "question": "Can I get it tomorrow?", "answer_key": "Standard delivery takes 3-5 business days"}
+{"id": "dl-3", "topic": "delivery_time", "in_scope": true, "question": "Delivery time?", "answer_key": "Standard delivery takes 3-5 business days"}
+{"id": "tr-1", "topic": "tracking", "in_scope": true, "question": "Where is my parcel right now?", "answer_key": "Track My Order"}
+{"id": "tr-2", "topic": "tracking", "in_scope": true, "question": "I never got a tracking number", "answer_key": "Track My Order"}
+{"id": "tr-3", "topic": "tracking", "in_scope": true, "question": "How do I see the status of what I bought?", "answer_key": "Track My Order"}
+{"id": "sh-1", "topic": "shipping_cost", "in_scope": true, "question": "Do you charge for delivery?", "answer_key": "Standard shipping costs PKR 200"}
+{"id": "sh-2", "topic": "shipping_cost", "in_scope": true, "question": "How much extra to ship my order?", "answer_key": "Standard shipping costs PKR 200"}
+{"id": "sh-3", "topic": "shipping_cost", "in_scope": true, "question": "Is delivery free?", "answer_key": "Standard shipping costs PKR 200"}
+{"id": "rp-1", "topic": "return_policy", "in_scope": true, "question": "Can I send something back if I don't like it?", "answer_key": "7-day easy return policy"}
+{"id": "rp-2", "topic": "return_policy", "in_scope": true, "question": "How many days do I have to return an item?", "answer_key": "7-day easy return policy"}
+{"id": "rp-3", "topic": "return_policy", "in_scope": true, "question": "I opened the box, can I still return it?", "answer_key": "7-day easy return policy"}
+{"id": "rh-1", "topic": "return_how", "in_scope": true, "question": "What is the process to send a product back?", "answer_key": "free pickup from your address within 2 business days"}
+{"id": "rh-2", "topic": "return_how", "in_scope": true, "question": "Do I have to drop it off somewhere myself?", "answer_key": "free pickup from your address within 2 business days"}
+{"id": "rh-3", "topic": "return_how", "in_scope": true, "question": "Will someone collect the item from my house?", "answer_key": "free pickup from your address within 2 business days"}
+{"id": "rf-1", "topic": "refund_time", "in_scope": true, "question": "How long until I get my money back?", "answer_key": "5-7 business days after we receive and inspect"}
+{"id": "rf-2", "topic": "refund_time", "in_scope": true, "question": "My refund hasn't arrived yet", "answer_key": "5-7 business days after we receive and inspect"}
+{"id": "rf-3", "topic": "refund_time", "in_scope": true, "question": "When is the money credited back?", "answer_key": "5-7 business days after we receive and inspect"}
+{"id": "pm-1", "topic": "payment_methods", "in_scope": true, "question": "Can I pay with EasyPaisa?", "answer_key": "Cash on Delivery, bank transfer, EasyPaisa, JazzCash"}
+{"id": "pm-2", "topic": "payment_methods", "in_scope": true, "question": "Do you take credit cards?", "answer_key": "Cash on Delivery, bank transfer, EasyPaisa, JazzCash"}
+{"id": "pm-3", "topic": "payment_methods", "in_scope": true, "question": "What are my options for paying?", "answer_key": "Cash on Delivery, bank transfer, EasyPaisa, JazzCash"}
+{"id": "cd-1", "topic": "cod", "in_scope": true, "question": "Can I pay when the courier arrives?", "answer_key": "Cash on Delivery is available across all major cities"}
+{"id": "cd-2", "topic": "cod", "in_scope": true, "question": "Is there a fee for cash on delivery?", "answer_key": "Cash on Delivery is available across all major cities"}
+{"id": "cd-3", "topic": "cod", "in_scope": true, "question": "Do you do COD in my city?", "answer_key": "Cash on Delivery is available across all major cities"}
+{"id": "wr-1", "topic": "warranty", "in_scope": true, "question": "Is my laptop covered if it breaks?", "answer_key": "manufacturer warranty ranging from 6 months to 2 years"}
+{"id": "wr-2", "topic": "warranty", "in_scope": true, "question": "How long is the guarantee on electronics?", "answer_key": "manufacturer warranty ranging from 6 months to 2 years"}
+{"id": "wr-3", "topic": "warranty", "in_scope": true, "question": "Do your products have a warranty period?", "answer_key": "manufacturer warranty ranging from 6 months to 2 years"}
+{"id": "wc-1", "topic": "warranty_claim", "in_scope": true, "question": "My device stopped working, what do I do?", "answer_key": "order number and a description of the issue"}
+{"id": "wc-2", "topic": "warranty_claim", "in_scope": true, "question": "How do I make a warranty claim?", "answer_key": "order number and a description of the issue"}
+{"id": "wc-3", "topic": "warranty_claim", "in_scope": true, "question": "What information do you need to repair my item?", "answer_key": "order number and a description of the issue"}
+{"id": "ac-1", "topic": "account", "in_scope": true, "question": "How do I sign up?", "answer_key": "Click on Sign Up on our website"}
+{"id": "ac-2", "topic": "account", "in_scope": true, "question": "I want to register on your site", "answer_key": "Click on Sign Up on our website"}
+{"id": "ac-3", "topic": "account", "in_scope": true, "question": "Do I need an account to shop?", "answer_key": "Click on Sign Up on our website"}
+{"id": "cn-1", "topic": "cancel", "in_scope": true, "question": "I made a mistake, can I stop my order?", "answer_key": "cancelled within 2 hours of placement"}
+{"id": "cn-2", "topic": "cancel", "in_scope": true, "question": "How long do I have to cancel?", "answer_key": "cancelled within 2 hours of placement"}
+{"id": "cn-3", "topic": "cancel", "in_scope": true, "question": "Can I cancel after it ships?", "answer_key": "cancelled within 2 hours of placement"}
+{"id": "oos-1", "topic": "out_of_scope", "in_scope": false, "question": "What is the capital of France?", "answer_key": null}
+{"id": "oos-2", "topic": "out_of_scope", "in_scope": false, "question": "Do you offer corporate bulk discounts for 500 units?", "answer_key": null}
+{"id": "oos-3", "topic": "out_of_scope", "in_scope": false, "question": "Can I get a job at your company?", "answer_key": null}
+{"id": "oos-4", "topic": "out_of_scope", "in_scope": false, "question": "Do you ship internationally to Canada?", "answer_key": null}
+{"id": "oos-5", "topic": "out_of_scope", "in_scope": false, "question": "What is your VAT registration number?", "answer_key": null}
+{"id": "oos-6", "topic": "out_of_scope", "in_scope": false, "question": "Who is the CEO of the company?", "answer_key": null}
+{"id": "oos-7", "topic": "out_of_scope", "in_scope": false, "question": "Write me a Python script to sort a list", "answer_key": null}
+{"id": "oos-8", "topic": "out_of_scope", "in_scope": false, "question": "Do you have a physical store I can visit?", "answer_key": null}
+{"id": "oos-9", "topic": "out_of_scope", "in_scope": false, "question": "Can I finance my purchase in monthly instalments?", "answer_key": null}
+{"id": "oos-10", "topic": "out_of_scope", "in_scope": false, "question": "What is the weather today?", "answer_key": null}

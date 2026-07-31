@@ -56,15 +56,32 @@ PDF / TXT upload
 
 ---
 
+## Evaluation
+
+Retrieval is measured against a labelled dataset of 55 questions — 45 in-scope across 15 topics, phrased as a customer would ask rather than copying the FAQ's wording, plus 10 deliberately unanswerable ones.
+
+```bash
+python eval/run_eval.py --sweep
+```
+
+| chunk_size | chunks | hit@1 | MRR | in-scope vs off-topic separation |
+|---:|---:|---:|---:|---:|
+| **400** (shipped default) | 2 | 66.7% | 0.833 | +0.145 |
+| 200 | 3 | 77.8% | 0.870 | +0.151 |
+| 40 | 15 | 62.2% | 0.764 | +0.220 |
+
+The shipped default is the weakest configuration on hit@1, and separation between answerable and unanswerable questions improves monotonically as chunks shrink. The corpus is small enough that the hit-rate differences sit inside the noise band for 45 queries, so the chunking result is directional rather than proven — [eval/README.md](eval/README.md) sets out the full table and what it does and doesn't support.
+
 ## Known limitations
 
 Being explicit about these, because they're the difference between a demo and a production system:
 
 - **The vector store is in-memory and session-scoped.** Embeddings live in `st.session_state` and are lost on reload. Fine for a single-user demo; a persistent store (pgvector, Qdrant, Chroma) is required for real deployment. `get_chroma_client()` is a stub returning `None` — kept as the seam where a real client would be injected.
 - **Intent classification is regex/keyword-based**, not a trained model. It's deterministic and fast, but brittle on phrasing it hasn't seen. A fine-tuned classifier is the upgrade path.
-- **No retrieval evaluation yet.** There is no labelled test set and no hit-rate or answer-accuracy measurement, so retrieval quality is currently unverified. This is the next thing being added.
-- **Chunking is fixed-size**, with no semantic or overlap-aware strategy tuned against a benchmark.
-- `rag_engine.py` exists at both the repo root and in `utils/` — consolidation pending.
+- **The default chunk size makes retrieval nearly a no-op on the sample corpus.** At `chunk_size=400`, the 442-word sample FAQ becomes 2 chunks, so retrieving the top 4 returns everything. Measured hit@1 is 66.7% — the worst of six configurations tested. See [eval/](eval/).
+- **No abstention gate.** The app sends the top 4 chunks to the LLM regardless of similarity score and infers "unanswered" by string-matching the reply. Measured ceiling for a similarity threshold is 87.3% accept/reject accuracy.
+- **Answer quality is unmeasured.** The harness scores retrieval only; there is no LLM-judge pass over generated answers yet.
+- **Two dead modules ship in the repo.** `rag_engine.py` at the root is a complete alternative implementation backed by ChromaDB, and `utils/rag_engine.py` is a third variant. Neither is imported by `app.py`, and `chromadb` is absent from `requirements.txt`, so the root module would fail on a clean install. Removal or consolidation pending.
 
 ---
 
@@ -132,11 +149,13 @@ Push to GitHub, connect the repo at [share.streamlit.io](https://share.streamlit
 
 ## Roadmap
 
-- [ ] Labelled evaluation set — measure retrieval hit-rate@k and answer accuracy
+- [x] Labelled evaluation set and retrieval harness — hit-rate@k, MRR, score separation
+- [ ] Larger corpus so chunking differences clear the noise floor
+- [ ] Confidence gating via `retrieve_with_scores`, with human handoff below threshold
+- [ ] LLM-judge pass to score answer quality, not just retrieval
 - [ ] Persistent vector store (pgvector or Qdrant)
-- [ ] Semantic chunking with overlap, benchmarked against fixed-size
 - [ ] Replace rule-based intent classifier with a fine-tuned model
-- [ ] Confidence gating with human handoff on low-confidence answers
+- [ ] Remove the two dead `rag_engine` modules
 
 ---
 

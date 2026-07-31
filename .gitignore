@@ -1,0 +1,25 @@
+# Environments
+venv/
+.venv/
+env/
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Models and caches
+.cache/
+*.pt
+*.bin
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
